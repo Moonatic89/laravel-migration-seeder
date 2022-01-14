@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.d_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title {
+  width: 100%;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.flightCard {
+  padding: 1rem 2rem;
+}
+
+.flightCard > * {
+  padding: 0.5rem;
+}
+
