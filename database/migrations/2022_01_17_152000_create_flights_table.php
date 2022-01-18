@@ -16,6 +16,7 @@ class CreateFlightsTable extends Migration
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
             $table->float('price', 6, 2)->nullable();
+            $table->string('image')->nullable();
             $table->string('destination');
             $table->date('departure');
             $table->date('arrival');

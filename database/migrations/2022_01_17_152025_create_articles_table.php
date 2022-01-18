@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('text');
+            $table->string('image')->nullable();
             $table->date('creation_date');
             $table->integer('votes');
             $table->timestamps();

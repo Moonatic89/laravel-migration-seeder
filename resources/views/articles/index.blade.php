@@ -3,38 +3,34 @@
 @section('content')
 
 <div class="title d_flex">
-    <h1>Lista dei voli disponibili:</h1>
+    <h1>Posts & Articoli</h1>
 </div>
-<div class="container d_flex ">
 
-    @foreach ($articles as $article)
+<div class="container">
 
-    <div class="flightCard d_flex">
+    <div class="row">
 
-        <div class="destination">
-            <h3>Titolo</h3>
-            {{$article->title}}
+        @foreach ($articles as $article)
+
+        <div class="col-3 text-white">
+
+            <div class="articleCard text-dark bg-image" style="background-image: url('{{$article->image}}')">
+
+                <div class="title">
+                    <h3>{{$article->title}}</h3>
+                </div>
+
+                <div class="departure">
+                    <h3>{{$article->text}}</h3>
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="airline">
-            <h3>Testo</h3>
-            {{$article->text}}
-        </div>
-
-        <div class="departure">
-            <h3>Creato il:</h3>
-            {{$article->creation_date}}
-        </div>
-
-        <div class="arrival">
-            <h3>Votato:</h3>
-            {{$article->vote}}
-        </div>
-
+        @endforeach
     </div>
-    @endforeach
-
 
 </div>
+
 
 @endsection
