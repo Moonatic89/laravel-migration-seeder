@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('welcome');
+Route::get('flights', 'FlightController@index')->name('flights');
+Route::get('flights/{flight}', 'FlightController@show')->name('flight');
+Route::get('articles', 'ArticleController@index')->name('articles');
+Route::get('articles/{article}', 'ArticleController@show')->name('article');
